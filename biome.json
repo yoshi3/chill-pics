@@ -1,0 +1,62 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "files": {
+    "ignore": [
+      "dist"
+    ],
+    "ignoreUnknown": true
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "root": "./"
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": true,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100
+  },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "recommended": true,
+      "a11y": {
+        "useHeadingContent": "error"
+      },
+      "complexity": {
+        "noExcessiveCognitiveComplexity": "error",
+        "useSimplifiedLogicExpression": "error"
+      },
+      "correctness": {
+        "noUnusedVariables": "error",
+        "useHookAtTopLevel": "error"
+      },
+      "style": {
+        "useCollapsedElseIf": "error",
+        "useFragmentSyntax": "error",
+        "useNamingConvention": "error",
+        "useSingleVarDeclarator": "off"
+      },
+      "suspicious": {
+        "noConsoleLog": "error"
+      },
+      "nursery": {
+        "noApproximativeNumericConstant": "error",
+        "noDuplicateJsonKeys": "error",
+        "noEmptyCharacterClassInRegex": "error",
+        "noUnusedImports": "error",
+        "noUselessElse": "error",
+        "useArrowFunction": "error",
+        "useGroupedTypeImport": "error"
+      }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "trailingComma": "es5"
+    }
+  }
+}
